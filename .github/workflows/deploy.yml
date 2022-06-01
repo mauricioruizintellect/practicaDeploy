@@ -24,4 +24,5 @@ jobs:
         npm install sfdx-cli --global
         openssl enc -nosalt -aes-256-cbc -d -in devops/server.key.enc -out server.key -base64 -K ${{ secrets.KEY }} -iv ${{ secrets.IV }}
         sfdx force:auth:jwt:grant --clientid ${{ secrets.CONSUMER_KEY }} --jwtkeyfile server.key --username ${{ secrets.USER }} --instanceurl https://login.salesforce.com -a qatraining
+        sfdx force:source:deploy -x manifest/package.xml --testlevel NoTestRun -w 10 -u qatraining
       name: Build and Test QA
