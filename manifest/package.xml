@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Account.Active__c</members>
+		<members>FieldsByActionController</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Lead.leadCode__c</members>
 		<name>CustomField</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>CustomMetadata</name>
+	</types>
+	<types>
+		<members>setupFields__mdt</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningComponentBundle</name>
 	</types>
 	<version>53.0</version>
 </Package>
